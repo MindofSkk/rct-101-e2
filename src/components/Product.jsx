@@ -1,24 +1,29 @@
 import React from "react";
+import { Text } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
+import { Tag } from "@chakra-ui/react";
+import { TagLabel } from "@chakra-ui/react";
 
-const Product = () => {
-  // TODO: Remove below const and instead import them from chakra
-  const Text = () => <div />;
-  const Image = () => <div />;
-  const Box = () => <div />;
-  const Stack = () => <div />;
-  const Heading = () => <div />;
-  const Tag = () => <div />;
-  const TagLabel = () => <div />;
+const Product = (props) => {
+ 
+//  console.log("fianl",props.title)
+
   return (
+    <>
     <Stack data-cy="product">
-      <Image data-cy="product-image" />
-      <Text data-cy="product-category"></Text>
-      <Tag>
-        <TagLabel data-cy="product-gender"></TagLabel>
-      </Tag>
-      <Heading data-cy="product-title"></Heading>
-      <Box data-cy="product-price"></Box>
-    </Stack>
+              <Image data-cy="product-image" src={props.imageSrc} />
+              <Text data-cy="product-category">{props.category}</Text>
+              <Tag>
+                <TagLabel data-cy="product-gender">{props.gender}</TagLabel>
+              </Tag>
+              <Heading data-cy="product-title">{props.title}</Heading>
+              <Box data-cy="product-price">{props.price}</Box>
+      </Stack>
+     
+    </>
   );
 };
 

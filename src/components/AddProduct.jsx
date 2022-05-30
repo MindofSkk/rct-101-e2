@@ -35,7 +35,7 @@ const AddProduct = () => {
             <Radio data-cy="add-product-gender-unisex">unisex</Radio>
           </RadioGroup>
           <Input data-cy="add-product-price" />
-          <Button data-cy="add-product-submit-button"></Button>
+          <Button data-cy="add-product-submit-button">Submit</Button>
         </ModalBody>
       </Modal>
     </>
